@@ -1,0 +1,33 @@
+import java.util.*;
+import java.util.Random;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Random rc=new Random();
+        
+        
+        int number= rc.nextInt(100)+1;
+        int attempts=0;
+        boolean guessedCorrectly=false;
+
+        System.out.println("Welcome to the number guessing game");
+        System.out.println("We have selected a number between 1 to 100.Try to guess it correctly");
+
+    while (!guessedCorrectly){
+        System.out.println("Enter your guess: ");
+        int guess=sc.nextInt();
+        attempts++;
+
+        if(guess==number){
+                guessedCorrectly=true;}
+                
+        else if (guess<number){
+            System.out.println("Try a higher number");}
+
+        else{
+            System.out.println("Try a lower number.");
+            }
+        }
+System.out.println("Congratulations you have guessed the right number");
+    }
+}
